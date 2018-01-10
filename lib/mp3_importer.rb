@@ -9,7 +9,7 @@ attr_accessor :path, :files
   end
 
   def files
-    Dir[(@path)].collect { |el| el.split("/").last }
+    Dir[(@path)].collect { |el| el.split("/").last if el.split(".").last == "mp3"}
   end
 
   def import
