@@ -12,6 +12,7 @@ attr_accessor :name, :artist
   #   Artist.find_or_create_by_name(name)
   #   self.add_song()
   # end
+  
   def self.new_song(name)
     self.new(name)
   end
