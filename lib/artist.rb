@@ -23,8 +23,7 @@ attr_accessor :name, :songs
   end
 
   def print_songs
-    @songs.each do |el|
-      puts el.name
+    @songs.each {} |el| puts el.name }
     end
   end
 
