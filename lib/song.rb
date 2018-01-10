@@ -10,9 +10,9 @@ attr_accessor :name, :artist
   def artist_name=(name)
     self.artist = Artist.find_or_create_by_name(name)
     artist.add_song(self.name)
-    binding.pry
+    # binding.pry
     artist.name.save
-    
+
   end
 
   def self.new_by_filename(file_name)
