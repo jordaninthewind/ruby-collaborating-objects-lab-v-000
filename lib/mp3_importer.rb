@@ -13,6 +13,6 @@ attr_accessor :path
   end
 
   def import
-    self.files.each {|i| Song.new_by_filename(i)}
+    self.files.each { |i| Song.new_by_filename(i) }
   end
 end
