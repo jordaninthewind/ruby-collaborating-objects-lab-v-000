@@ -12,8 +12,6 @@ attr_accessor :path
     Dir[(@path += "/*.mp3")].map { |el| el.split("/").last }
   end
 
-binding.pry
-
   def import
     self.files.each {|i| Song.new_by_filename(i)}
   end
