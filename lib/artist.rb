@@ -38,6 +38,6 @@ attr_accessor :name, :songs
     else
       Artist.new(artist)
     end
-    self.save
+    # self.save
   end
 end
