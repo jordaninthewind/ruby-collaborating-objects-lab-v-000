@@ -27,7 +27,7 @@ attr_accessor :name, :songs
   end
 
   def find(name)
-    self.all.find {|i| i == name}
+    self.all.find {|i| i.name == name}
   end
 
   def create
@@ -35,7 +35,7 @@ attr_accessor :name, :songs
   end
 
   def self.find_or_create_by_name(artist)
-    if self.all.any? {|i| i.name == artist }
+    if self.find(artist)
       artist
     else
       Artist.new(artist)
