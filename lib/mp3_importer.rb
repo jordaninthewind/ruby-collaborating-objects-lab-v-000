@@ -2,14 +2,14 @@ require 'pry'
 
 class MP3Importer
 
-attr_accessor :path, :files
+# attr_accessor :path, :files
 
   def initialize(path)
     @path = path
   end
 
   def files
-    @files = Dir[(@path += "/*.mp3")].collect { |el| el.split("/").last }
+    Dir[(@path += "/*.mp3")].collect { |el| el.split("/").last }
   end
 
   def import
