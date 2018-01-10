@@ -18,7 +18,8 @@ attr_accessor :path, :files
 
   def import
     self.files.each do |i|
-      Song.new_by_filename(i) 
+      Song.new_by_filename(i)
+      binding.pry
     end
   end
 end
