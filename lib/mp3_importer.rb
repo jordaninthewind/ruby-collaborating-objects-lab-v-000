@@ -9,8 +9,9 @@ attr_accessor :path
   end
 
   def files
-    Dir[(@path += "/*.mp3")].map do |el|
-      el.split("/").last
+    x = []
+    Dir[(@path += "/*.mp3")].each do |el|
+      x << el.split("/").last
       binding.pry
     end
   end
