@@ -26,19 +26,19 @@ attr_accessor :name, :songs
     @songs.each { |el| puts el.name }
   end
 
-  def find(name)
+  def self.find(name)
     self.all.find {|i| i.name == name}
   end
 
-  def create
-
+  def self.create(name)
+    self.new(name).save
   end
 
   def self.find_or_create_by_name(artist)
     if self.find(artist)
       artist
     else
-      x = self.new(artist)
+      x = self.create(artist)
       x.save
       # binding.pry
       x
