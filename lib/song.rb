@@ -19,5 +19,6 @@ attr_accessor :name, :artist
     new_song = self.new(file[1])
     new_song.artist_name = file[0]
     new_song
+    binding.pry
   end
 end
