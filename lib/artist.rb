@@ -38,7 +38,7 @@ attr_accessor :name, :songs
     if self.find(artist)
       artist
     else
-      self.new(artist)
+      self.new(artist).save
       # x.save
       # # binding.pry
       # x
