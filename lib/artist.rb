@@ -36,7 +36,9 @@ attr_accessor :name, :songs
     if self.all.any? {|i| i.name == artist }
       artist
     else
-      Artist.new(artist)
+      x = Artist.new(artist)
+      x.saves
+      x
     end
     # self.save
   end
