@@ -9,13 +9,12 @@ attr_accessor :path
   end
 
   def files
-    @path += "/*.mp3"
     x = Dir[@path]
     binding.pry
   end
 
   def import
-    @path += "/*.mp3"
+    # @path += "/*.mp3"
     Dir[@path].each {|i| Song.new_by_filename(i)}
   end
 
