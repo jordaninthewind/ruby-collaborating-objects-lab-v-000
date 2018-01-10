@@ -9,9 +9,7 @@ attr_accessor :path, :files
   end
 
   def files
-    x = Dir[(@path += "/*.mp3")]
-    x.collect { |el| el.split("/").last }
-    binding.pry
+    Dir[(@path += "/*.mp3")].collect { |el| el.split("/").last }
   end
 
   def import
