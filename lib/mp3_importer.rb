@@ -10,8 +10,8 @@ attr_accessor :path
 
   def files
     @path += "/.mp3"
-    Dir[@path]
-    # binding.pry
+    x = Dir[@path]
+    binding.pry
   end
 
   def import
