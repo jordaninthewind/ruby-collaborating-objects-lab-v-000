@@ -15,7 +15,13 @@ attr_accessor :name, :artist
     # new_song.artist.songs << new_song
     new_song
   end
+
+  def artist_name=(name)
+
+  end
+
 end
+
 
 
   #
