@@ -35,13 +35,6 @@ attr_accessor :name, :songs
   end
 
   def self.find_or_create_by_name(artist)
-    if self.find(artist)
-      artist
-    else
-      x = self.create(artist)
-      x.save
-      # binding.pry
-      x
-    end
+    self.find(name) ? self.find(name) : self.create(name)
   end
 end
