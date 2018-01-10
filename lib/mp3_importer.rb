@@ -34,7 +34,7 @@ class MP3Importer
     Dir[@path].each { |el| @files << el.split("/").last }
     @files
   end
-  
+
   def import
     files.each{|f| Song.new_by_filename(f)}
   end
