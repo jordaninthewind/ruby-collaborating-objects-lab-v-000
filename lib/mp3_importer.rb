@@ -10,7 +10,7 @@ attr_accessor :path
 
   def files
     @path += "/*.mp3"
-    Dir[@path].collect {|el| el.split("/")[-1]}
+    return Dir[@path].collect {|el| el.split("/")[-1]}
     # binding.pry
   end
 
