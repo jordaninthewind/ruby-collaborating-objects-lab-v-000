@@ -10,7 +10,6 @@ attr_accessor :path, :files
 
   def files
     Dir[(@path)].collect { |el| el.split("/").last }
-
   end
 
   def import
