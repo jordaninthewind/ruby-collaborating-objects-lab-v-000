@@ -11,7 +11,6 @@ attr_accessor :path, :files
   def files
     Dir[@path].collect do |el|
       el.split("/").last if el.split(".").last == "mp3"
-      # binding.pry
     end
   end
 
