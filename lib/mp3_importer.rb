@@ -13,7 +13,8 @@ attr_accessor :path, :files
        @path += "/*.mp3"
     end
 
-    Dir[@path].collect { |el| el.split("/").last }
+    @files = Dir[@path].collect { |el| el.split("/").last }
+    @files
   end
 
   def import
