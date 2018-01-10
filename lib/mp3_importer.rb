@@ -30,9 +30,11 @@ class MP3Importer
   end
 
   def files
-    @files ||= Dir.glob("#{path}/*.mp3").collect{ |f| f.gsub("#{path}/", "") }
+    @path += "/*.mp3" unless @path.split("/").last == "*.mp3"
+    Dir[@path].each { |el| @files << el.split("/").last }
+    @files
   end
-
+  
   def import
     files.each{|f| Song.new_by_filename(f)}
   end
