@@ -9,7 +9,7 @@ attr_accessor :path
   end
 
   def files
-    self.Dir[(@path += "/*.mp3")].map { |el| el.split("/").last }
+    Dir[(@path += "/*.mp3")].map { |el| el.split("/").last }
   end
 
   def import
