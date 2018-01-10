@@ -14,7 +14,7 @@ attr_accessor :path, :files
        @path += "/*.mp3"
     end
 
-    Dir[@path].collect { |el| el.split("/").last }
+    Dir[@path].each { |el| @files << el.split("/").last }
     @files
   end
 
