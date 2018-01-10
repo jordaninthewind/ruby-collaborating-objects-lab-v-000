@@ -10,8 +10,6 @@ attr_accessor :path
 
   def files
     Dir[(@path += "/*.mp3")].map { |el| el.split("/").last }
-      binding.pry
-    end
   end
 
   def import
