@@ -33,7 +33,6 @@ attr_accessor :name, :songs
   end
 
   def self.find_or_create_by_name(artist)
-    
     if self.all.any? {|i| i.name == artist }
       artist
     else
