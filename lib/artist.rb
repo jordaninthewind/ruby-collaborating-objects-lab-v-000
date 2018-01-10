@@ -35,6 +35,6 @@ attr_accessor :name, :songs
   end
 
   def self.find_or_create_by_name(artist)
-    self.find(name) ? self.find(name) : self.create(name)
+    self.find(artist) ? self.find(artist) : self.create(artist)
   end
 end
