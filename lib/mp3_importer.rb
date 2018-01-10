@@ -9,7 +9,7 @@ attr_accessor :path
   end
 
   def files
-    @path += "/.mp3"
+    @path += "/*.mp3"
     x = Dir[@path]
     binding.pry
   end
