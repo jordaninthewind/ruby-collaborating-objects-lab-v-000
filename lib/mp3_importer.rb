@@ -2,7 +2,7 @@ require 'pry'
 
 class MP3Importer
 
-attr_accessor :path
+attr_accessor :path, :file_names
 
   def initialize(path)
     @path = path
@@ -10,9 +10,9 @@ attr_accessor :path
 
   def files
     @path += "/*.mp3"
-    file = Dir[@path].collect {|el| el.split("/")[-1]}
-    binding.pry
-    return file
+    @file_names = Dir[@path].collect {|el| el.split("/")[-1]}
+
+    @file_names
   end
 
   def import
