@@ -11,7 +11,6 @@ attr_accessor :path, :file_names
   def files
     @path += "/*.mp3"
     names = Dir[@path].collect {|el| el.split("/")[-1]}
-
     return names
   end
 
