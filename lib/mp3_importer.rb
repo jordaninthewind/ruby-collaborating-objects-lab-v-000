@@ -14,7 +14,7 @@ attr_accessor :path
 
     Dir[@path].each { |el| @files << el.split("/").last }
     @files
-    binding.pry
+    # binding.pry
   end
 
   def import
