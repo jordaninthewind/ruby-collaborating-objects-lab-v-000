@@ -21,7 +21,7 @@ attr_accessor :name, :artist
     new_song.artist_name = file[0]
 
     new_song
-    binding.pry
+    # binding.pry
   end
 end
 #
