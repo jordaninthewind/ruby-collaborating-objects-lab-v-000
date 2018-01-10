@@ -12,8 +12,8 @@ attr_accessor :path
     x = []
     Dir[(@path += "/*.mp3")].each do |el|
       x << el.split("/").last
-      binding.pry
     end
+    x
   end
 
   def import
