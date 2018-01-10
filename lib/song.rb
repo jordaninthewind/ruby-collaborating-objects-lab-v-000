@@ -9,6 +9,7 @@ attr_accessor :name, :artist
 
   def artist_name=(name)
     Artist.find_or_create_by_name(name).artist = name
+    binding.pry
   end
 
   def self.new_by_filename(file_name)
@@ -16,7 +17,7 @@ attr_accessor :name, :artist
     new_song = Song.new(file[1])
     new_song.artist_name = file[0]
 
-    binding.pry
+    # binding.pry
     # new_song.artist.songs << new_song
     new_song
   end
