@@ -13,7 +13,8 @@ attr_accessor :path
   end
 
   def import
-
+    @path += "/.mp3"
+    
   end
 
 end
