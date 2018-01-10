@@ -12,7 +12,7 @@ attr_accessor :name, :artist
     new_song = Song.new(file[1])
     new_song.artist = Artist.find_or_create_by_name(file[0])
     # binding.pry
-    # new_song
+    new_song
   end
 end
 
