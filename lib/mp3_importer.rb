@@ -9,8 +9,8 @@ attr_accessor :path
   end
 
   def files
-    @path += "/*.mp3"
-    Dir[@path].collect {|el| el.split("/")[-1]}
+    # @path += "/*.mp3"
+    Dir[(@path += "/*.mp3")].collect {|el| el.split("/")[-1]}
   end
 
   def import
