@@ -9,8 +9,14 @@ attr_accessor :path, :files
   end
 
   def files
+    if @path.split("/").last != "/*.mp3"
+       @path += "/*.mp3"
+    end
+
     Dir[@path].collect do |el|
-      el.split("/").last if el.split(".").last == "mp3"
+      el.split("/").last#{ if el.split(".").last == "mp3"}
+      # binding.pry
+
     end
   end
 
