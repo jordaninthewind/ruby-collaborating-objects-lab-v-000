@@ -9,8 +9,8 @@ attr_accessor :path
   end
 
   def files
-    x = Dir[@path]
-    binding.pry
+    Dir[@path].collect {|el| el.split("/")[-1]}
+    # binding.pry
   end
 
   def import
