@@ -18,6 +18,10 @@ attr_accessor :path
   end
 
   def import
+    if @files.length == 0
+      self.files
+    end
+    
     @files.each do |i|
       Song.new_by_filename(i)
     end
