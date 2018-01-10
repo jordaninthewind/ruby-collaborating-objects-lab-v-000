@@ -26,8 +26,8 @@ attr_accessor :name, :songs
     @songs.each { |el| puts el.name }
   end
 
-  def find
-
+  def find(name)
+    self.all.find {|i| i == name}
   end
 
   def create
