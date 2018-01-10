@@ -15,7 +15,6 @@ attr_accessor :path
   end
 
   def import
-    @path += "/*.mp3"
     self.files.each {|i| Song.new_by_filename(i)}
   end
 
