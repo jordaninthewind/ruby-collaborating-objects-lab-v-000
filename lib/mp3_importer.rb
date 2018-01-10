@@ -9,6 +9,8 @@ attr_accessor :path
   end
 
   def files
+    @path += "/.mp3"
+    Dir[@path]
     # binding.pry
   end
 
