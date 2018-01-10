@@ -37,7 +37,7 @@ attr_accessor :name, :songs
       artist
     else
       x = Artist.new(artist)
-      x.saves
+      x.save
       x
     end
     # self.save
