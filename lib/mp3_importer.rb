@@ -11,7 +11,6 @@ attr_accessor :path, :files
 
   def files
     @path += "/*.mp3" unless @path.split("/").last == "*.mp3"
-    binding.pry
     Dir[@path].each { |el| @files << el.split("/").last }
     @files
   end
