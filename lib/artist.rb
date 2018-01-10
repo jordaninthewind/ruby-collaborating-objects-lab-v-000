@@ -33,8 +33,11 @@ attr_accessor :name, :songs
   # def self.create(name)
   #   self.new(name)
   # end
+  def self.create(name)
+    self.new(name).tap {|artist| artist.save}
+  end
 
   def self.find_or_create_by_name(artist)
-    self.find(artist) ? self.find(artist) : self.new(artist)
+    self.find(artist) ? self.find(artist) : self.create(artist)
   end
 end
