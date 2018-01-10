@@ -30,9 +30,6 @@ attr_accessor :name, :songs
     self.all.find {|i| i.name == name}
   end
 
-  # def self.create(name)
-  #   self.new(name)
-  # end
   def self.create(name)
     self.new(name).tap {|artist| artist.save}
   end
