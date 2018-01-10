@@ -6,10 +6,11 @@ attr_accessor :path, :files
 
   def initialize(path)
     @path = path
+    @files = []
   end
 
   def files
-    Dir[(@path += "/*.mp3")].collect { |el| el.split("/").last }
+    Dir[(@path += "/*.mp3")].collect { |el| @files << el.split("/").last }
   end
 
   def import
