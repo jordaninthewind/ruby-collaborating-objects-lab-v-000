@@ -14,7 +14,7 @@ attr_accessor :path, :files
   end
 
   def import
-    binding.pry
+    # binding.pry
     self.files.each { |i| Song.new_by_filename(i) }
   end
 end
