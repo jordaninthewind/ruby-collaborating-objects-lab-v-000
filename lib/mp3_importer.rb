@@ -15,5 +15,4 @@ attr_accessor :path
   def import
     self.files.each {|i| Song.new_by_filename(i)}
   end
-
 end
