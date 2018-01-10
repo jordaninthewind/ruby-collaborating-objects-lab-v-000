@@ -11,6 +11,7 @@ attr_accessor :path, :files
 
   def files
     if @path.split("/").last != "/*.mp3"
+        binding.pry
        @path += "/*.mp3"
     end
 
@@ -21,7 +22,7 @@ attr_accessor :path, :files
   def import
     self.files.each do |i|
       Song.new_by_filename(i)
-      binding.pry
+      # binding.pry
     end
   end
 end
